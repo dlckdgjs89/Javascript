@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>"if"에 관한 고찰</title>
+</head>
+<body>	
+	<script>
+		if (-1 || 0) alert( 'first' ); // -1 -> true -> 실행됨
+		if (-1 && 0) alert( 'second' ); // 0 -> false -> X
+		if (null || -1 && 1) alert( 'third' ); // 1 -> true -> 실행됨
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>OR 연산자의 피연산자가 alert 라면?</title>
+</head>
+<body>	
+	<script>
+		alert( alert(1) || 2 || alert(3) ); // 1 다음 2 return됨
+		//alert메서드는 undefined를 반환하기 때문에, OR 연산자는 다음 피연산자를 평가하게 됩니다. truthy를 찾기 위해 말이죠.
+	</script>
+</body>
+</html>
