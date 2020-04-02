@@ -4,11 +4,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
+	<title>Which variables are available?</title>
 </head>	
 <body>	
  <script>
+	function makeWorker() {
+	let name = "Pete";
 
+		return function() {
+			alert(name);
+		};
+	}
+
+	let name = "John";
+
+	// create a function
+	let work = makeWorker();
+
+	// call it
+	work(); // what will it show?
+
+	// Pete 출력됨
  </script>
 </body>
 </html>

@@ -4,21 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Does a function pickup latest changes?</title>
+	<title>Is variable visible?</title>
 </head>	
 <body>	
  <script>
-  let name = "John";
+	let x = 1;
 
-  function sayHi() {
-    alert("Hi, " + name);
-  }
+	function func() {
+	console.log(x); // ?   ->정답 :에러남. 이유는 이해안됨;;
 
-  name = "Pete";
+	let x = 2;
+	}
 
-  sayHi(); // what will it show: "John" or "Pete"?
+	func();
 
-  // Pete 출력된다.
+	
  </script>
 </body>
 </html>

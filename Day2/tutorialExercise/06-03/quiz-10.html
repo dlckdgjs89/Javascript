@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>함수를 사용해 군대 만들기</title>
+</head>	
+<body>	
+ <script>
+	// 어렵다.. ;;;
+
+	function makeArmy() {
+		let shooters = [];
+
+		for(let i=0; i<10; i++) {
+			let shooter = function() { // shooter function
+			alert( i ); // should show its number
+			};
+			shooters.push(shooter);
+		}
+		return shooters;
+	}
+	let army = makeArmy();
+
+	army[0](); // 0번째 shooter가 10을 출력함
+	army[5](); // 5번째 shooter 역시 10을 출력함
+	// 모든 shooter가 자신의 번호 대신 10을 출력하고 있음
+ </script>
+</body>
+</html>

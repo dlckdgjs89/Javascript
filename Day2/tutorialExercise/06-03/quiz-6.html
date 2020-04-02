@@ -4,21 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Does a function pickup latest changes?</title>
+	<title>클로저를 이용하여 합 구하기</title>
 </head>	
 <body>	
  <script>
-  let name = "John";
+	 function sum(a) {
+		 return function(b) {
+			 return a + b;
+		 };
+	 }
 
-  function sayHi() {
-    alert("Hi, " + name);
-  }
+	 alert(sum(1)(2));
+	 alert(sum(5)(-1));
 
-  name = "Pete";
-
-  sayHi(); // what will it show: "John" or "Pete"?
-
-  // Pete 출력된다.
  </script>
 </body>
 </html>

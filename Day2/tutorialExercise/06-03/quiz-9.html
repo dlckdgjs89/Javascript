@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>필드를 기준으로 정렬하기</title>
+</head>	
+<body>	
+ <script>
+	let users = [
+	{ name: "John", age: 20, surname: "Johnson" },
+	{ name: "Pete", age: 18, surname: "Peterson" },
+	{ name: "Ann", age: 19, surname: "Hathaway" }
+	];
+
+	function byField(field) {
+		return function(a, b) {
+			return (a[field] > b[field]) ? 1 : -1;
+		};
+	}
+
+	users.sort(byField('name'));
+	users.forEach(user => alert(user.name)); // ## user가 매개변수인데 어디서 나온건가??
+
+	users.sort(byField('age'));
+	users.forEach(user => alert(user.age));
+ </script>
+</body>
+</html>
