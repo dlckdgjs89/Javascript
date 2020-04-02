@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>객체가 비어있는지 확인하기</title>
+	
+</head>
+<body>
+	<script>
+        let schedule = {};
+        alert( isEmpty(schedule) );
+        schedule["8:30"] = "get up";
+        alert( isEmpty(schedule) );
+
+        // ## 아래 구분으로는 property가 있는 경우 출력만되고
+        // ## property가 없으면 아무것도 출력안됨;;
+
+        // for(let key in schedule) {
+        //     console.log(key);
+        //     console.log(schedule[key]);
+        // }
+    
+
+        // ## 아래 구문으로는 풀이가 안됨;;
+        // function isEmpty(obj) {
+        //     if(("key" in obj) === undefined) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+        function isEmpty(obj) {
+            for(let key in schedule) {
+                return false;     // property가 없으면, 왜 true로 빠지는지 이해 안됨;;
+            } return true;
+        } 
+        
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>프로퍼티 합계 구하기</title>
+	
+</head>
+<body>
+	<script>
+    	let salaries = {
+			John: 100,
+			Ann: 160,
+			Pete: 130
+		}
+
+		let sum = 0;
+
+		/*
+		for문을 객체로 만들기 실패...
+		function salSum(obj) {
+			for(let key in obj) {
+				// alert(obj[key]);
+				sum += obj[key];
+				return sum;
+			}
+		}
+		alert(salSum(salaries));
+        */
+		
+		for(let key in salaries) {
+			sum += salaries[key];
+		}
+		alert(sum);
+		
+
+	</script>
+</body>
+</html>

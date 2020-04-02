@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>프로퍼티 값 두 배로 부풀리기</title>
+	
+</head>
+<body>
+	<script>
+    let menu = {
+		width: 200,
+		height: 300,
+		title: "My menu"
+	};
+
+	function multiplyNumeric(obj){
+		for(let key in obj){
+			// console.log(typeof obj[key]);  ==> "number"
+
+			if(typeof obj[key] === "number") {
+				obj[key] = obj[key]*2; 
+			}
+		}
+	}
+
+
+    // function multiplyNumeric(obj){
+	// 	for(let key in obj){
+	// 		if(obj[key] !== "string") {
+	// 			obj[key] = obj[key]*2; 
+	// 		}
+	// 	}
+	// }
+
+	// 객체 for문 함수
+	function see(obj){
+		for(let key in obj) {
+			console.log(key);
+			console.log(obj[key]);
+		}
+	}
+
+	multiplyNumeric(menu);
+	see(menu);
+	// alert(menu);
+
+	
+
+
+	</script>
+</body>
+</html>
