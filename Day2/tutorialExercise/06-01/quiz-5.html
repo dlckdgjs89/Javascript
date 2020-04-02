@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>단일 연결 리스트를 역순으로 출력하기</title>
+</head>	
+<body>	
+ <script>
+	let list = {
+		value: 1,
+		next: {
+			value: 2,
+			next: {
+			value: 3,
+			next: {
+				value: 4,
+				next: null
+			}
+			}
+		}
+	};
+
+	function printList(list) {
+		let arr = [];
+		let tmp = list;
+
+		while(tmp) {
+			arr.push(tmp.value);
+			tmp = tmp.next;
+		}
+
+		for(let i = arr.length -1; i >= 0; i--) {  // arr.length = 4
+			alert(arr[i]);
+		}
+	}
+	
+	alert(printList(list));
+ </script>
+</body>
+</html>

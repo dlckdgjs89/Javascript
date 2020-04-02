@@ -4,16 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
+	<title>pow(x,n) 함수 만들기</title>
 </head>	
 <body>	
  <script>
-	 // 정답 : 1
-	let i = 3;
-
-	while (i) {
-	alert( i-- );
+	function pow(x, n) {
+		let result = x;
+		
+		for(var i=1; i<n; i++) {
+			result *= x;
+		}
+		return result;
 	}
+
+	let x = prompt("x?", '');
+	let n = prompt("n?", '');
+
+	console.log(pow(x, n));
  </script>
 </body>
 </html>

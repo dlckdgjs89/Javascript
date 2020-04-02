@@ -4,16 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
+	<title>주어진 숫자까지의 모든 숫자 더하기</title>
 </head>	
 <body>	
  <script>
-	 // 정답 : 1
-	let i = 3;
-
-	while (i) {
-	alert( i-- );
+	function sumTo(n) {
+		for(let i=0; i<n; i++) {
+			//n = n-0 + n-1 + n-2
+			if(n>1){
+				return n + sumTo(n-1);
+			} else {
+				return 1;
+			}
+		}
 	}
+	alert(sumTo(100));
  </script>
 </body>
 </html>

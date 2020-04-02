@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>화살표 함수로 변경하기</title>
+</head>	
+<body>	
+ <script>
+	// function ask(question, yes, no) {
+	// 	if (confirm(question)) yes()
+	// 	else no();
+	// }
+
+	// ask(
+	// 	"동의하십니까?",
+	// 	function() { alert("동의하셨습니다."); },
+	// 	function() { alert("취소 버튼을 누르셨습니다."); }
+	// );
+
+	function ask(question, yes, no) {
+		if (confirm(question)) yes()
+		else no();
+	}
+	ask(
+		"동의하십니까?",
+		() => alert("동의하셨습니다."),
+		() => alert("취소 버튼을 누르셨습니다.")
+	);
+ </script>
+</body>
+</html>
