@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>심볼</title>
+	
+</head>
+<body>
+	<script>
+        /*
+        심볼(Symbol) : 원하는 것을 객체 안에 ‘은밀하게’ 숨길 수 있습니다.
+
+        사실, 심볼을 완전히 숨길 방법은 없습니다. 
+        내장 메서드 Object.getOwnPropertySymbols(obj)를 사용하면 
+        모든 심볼을 볼 수 있고, 
+        메서드 Reflect.ownKeys(obj)는 심볼형 키를 포함한 객체의 
+        모든 키를 반환해줍니다.
+        */
+
+
+        let id = Symbol("id");
+        //alert(id); // TypeError: Cannot convert a Symbol value to a string
+
+        alert(id.toString()); // Symbol(id) 출력
+        alert(id.description); // id 출력
+	</script>
+</body>
+</html>
