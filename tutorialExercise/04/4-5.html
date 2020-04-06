@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>체이닝</title>
+	
+</head>
+<body>
+	<script>
+	let ladder = {
+		step: 0,
+		up() {
+			this.step++;
+			return this;
+		},
+		down() {
+			this.step--;
+			return this;
+		},
+		showStep: function() { // 사다리에서 몇 번째 단에 올라와 있는지 보여줌
+			alert( this.step );
+			return this;
+		}
+	};
+
+	// ladder.up();
+	// ladder.up();
+	// ladder.down();
+	// ladder.showStep(); // 1
+
+	ladder
+		.up()
+		.up()
+		.down()
+		.showStep(); // 1
+	</script>
+</body>
+</html>

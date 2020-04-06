@@ -26,6 +26,15 @@
 	
 	alert(fib(7));
 	//alert(fib(77));
+
+	function fib(num, cache = {}) { // or set default param as cache = [undefined, 1, 1]
+	if (typeof cache[num] !== 'undefined') return cache[num];
+	if (num < 2) return num;
+
+	cache[num] = fibTD(num - 1, cache) + fibTD(num - 2, cache);
+	// console.log(memo)
+	return cache[num];
+	}
  </script>
 </body>
 </html>
