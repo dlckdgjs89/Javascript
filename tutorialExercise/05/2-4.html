@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>An occasional infinite loop</title>
+	
+</head>
+<body>
+	<script>
+        /*
+        This loop is infinite. It never ends. Why?
+        이러한 일은 0.2와 같은 분수를 추가 할 때 정밀도 손실로 인해 발생합니다.
+        결론 : 소수 분수로 작업 할 때 동등 검사를 피하십시오.
+        */
+        let i = 0;
+        while (i < 11) {
+        i += 0.2;
+        if (i > 9.8 && i < 10.2) alert( i );
+        }
+            
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>계산기 만들기</title>
+	
+</head>
+<body>
+	<script>
+        // a, b 가 문자로 인식되는 부분을 고치고 싶은데,
+        // +prompt 로 하면 숫자로 인식됨 근데 무슨 의미지?
+        // 문자형으로 바뀐 숫자를 다시 숫자형으로 강제 변환하려면 "단항 덧셈 연산자"
+
+        function Calculator() {
+            this.read = function() {
+                // 아래와 같이 let으로 선언하면 에러남.
+                //let a = = prompt("숫자를 입력하세요.", 0);
+                //let b = = prompt("숫자를 입력하세요.", 0);
+                this.a = +prompt("숫자를 입력하세요.", 0);
+                this.b = +prompt("숫자를 입력하세요.", 0);
+            };
+            this.sum = function() {
+                return this.a + this.b;
+            };
+            this.mul = function() {
+                return this.a * this.b;
+            };
+        }
+        
+        let calculator = new Calculator();
+        calculator.read();
+
+        alert( "Sum=" + calculator.sum() );
+        alert( "Mul=" + calculator.mul() );
+	</script>
+</body>
+</html>

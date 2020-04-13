@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Repeat until the input is a number</title>
+	
+</head>
+<body>
+	<script>
+      /*
+    방문자가 유효한 숫자 값을 입력 할 때까지 숫자를 요구하는 readNumber 함수를 
+    작성하십시오. 결과 값은 숫자로 반환되어야합니다.
+    방문자는 빈 줄을 입력하거나 "취소"를 눌러 프로세스를 중지 할 수도 있습니다.
+    이 경우 함수는 null을 반환해야합니다.
+      */
+
+    function readNumber() {
+        let a
+        
+        do {
+            a = prompt("숫자 입력하세요", 0);
+        } while ( !isFinite(a) );
+
+        if(a === null || a === '') {
+            return null;
+        }
+        return +a;
+    }
+
+    alert(`Read: ${readNumber()}`);
+	</script>
+</body>
+</html>

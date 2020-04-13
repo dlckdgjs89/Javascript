@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>스팸 문자열 걸러내기</title>
+	
+</head>
+<body>
+	<script>
+        // result 변수를 하나 선언 후 소문자로 다 바꿔버리고 비교하니 됨
+        function checkSpam(str) {
+            let result = str.toLowerCase();
+            if( result.includes('viagra') || result.includes('xxx') ) {
+                return alert(str + ": true");
+            } else {
+                return alert(str + ": false");
+            }
+        }     
+
+
+        checkSpam('buy ViAgRA now'); // == true
+        checkSpam('free xxxxx'); // == true
+        checkSpam("innocent rabbit"); // == false
+	</script>
+</body>
+</html>

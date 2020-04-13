@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Why 6.35.toFixed(1) == 6.3?</title>
+	
+</head>
+<body>
+	<script>
+	   alert( 1.35.toFixed(1) ); // 1.4
+	   alert( 6.35.toFixed(1) ); // 6.3
+
+	   //정수에 가깝게 만든다음 toFixed()를 사용해야 정밀도 손실이 발생안한다.
+	   alert( Math.round(6.35 * 10) / 10); // 6.35 -> 63.5 -> 64(rounded) -> 6.4
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>첫 글자를 대문자로 변경하기</title>
+	
+</head>
+<body>
+	<script>
+        function ucFirst(str) {
+            //빈 문자열인지를 확인하는 코드
+            if (!str) return str;
+
+            let a = str[0].toUpperCase();
+            let b = str.slice(1)
+            console.log(a);
+            console.log(b);
+            return alert(a+b);
+        }
+        
+        ucFirst("john");
+
+        //ucFirst("john") == "John";
+        //alert( "\u{1F60D}" );
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

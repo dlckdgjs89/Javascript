@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>누산기 만들기</title>
+	
+</head>
+<body>
+	<script>
+        // 여기도 숫자를 문자로 인식하는 문제 발생...
+        // +prompt() 의미가 무엇일까?
+
+        function Accumulator(startingValue) {
+            this.value = startingValue;
+            this.read = function() {
+                this.value += +prompt("숫자입력", 0);
+            };
+        }
+
+        let accumulator = new Accumulator(1); // 최초값: 1
+
+        accumulator.read(); // 사용자가 입력한 값을 더해줌
+        accumulator.read(); // 사용자가 입력한 값을 더해줌
+
+        alert(accumulator.value); // 최초값과 사용자가 입력한 모든 값을 더해 출력함
+	</script>
+</body>
+</html>

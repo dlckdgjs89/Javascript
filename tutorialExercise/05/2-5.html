@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>A random number from min to max</title>
+	
+</head>
+<body>
+	<script>
+        /*
+        내장 함수 Math.random ()은
+        0에서 1까지의 임의의 값 (1 제외)을 만듭니다.
+
+        random (min, max) 함수를 작성하여 min에서 max까지의 
+        임의 부동 소수점 수를 생성합니다 (max 제외).
+        */
+
+        function random(min, max) {
+            return Math.random() * max + min;
+
+            //정답
+            //return min + Math.random() * (max - min);
+        }
+
+        alert( random(1, 5) ); // 1.2345623452
+        alert( random(1, 5) ); // 3.7894332423
+        alert( random(1, 5) ); // 4.3435234525
+            
+	</script>
+</body>
+</html>
