@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Is array copied?</title>
+	
+</head>
+<body>
+	<script>
+        let fruits = ["Apples", "Pear", "Orange"];
+
+        // push a new value into the "copy"
+        let shoppingCart = fruits;
+        shoppingCart.push("Banana");
+
+        // what's in fruits?
+        alert( fruits.length ); // ?  --> 4, 변수는 같은 배열을 참조하기 때문
+	</script>
+</body>
+</html>

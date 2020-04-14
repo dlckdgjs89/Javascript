@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>평균 나이 구하기</title>
+	
+</head>
+<body>
+	<script>
+        // 왜 답이 안나오지 NaN 이 나온다..
+        function getAverageAge(users) {
+            return users.reduce((prev, user) => prev + user.age, 0) / users.lengh;
+        }
+
+        let john = { name: "John", age: 25 };
+        let pete = { name: "Pete", age: 30 };
+        let mary = { name: "Mary", age: 29 };
+
+        let arr = [ john, pete, mary ];
+
+        alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+	</script>
+</body>
+</html>

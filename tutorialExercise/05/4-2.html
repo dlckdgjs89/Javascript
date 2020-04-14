@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Array operations.</title>
+	
+</head>
+<body>
+	<script>
+        let styles = ['Jazz', 'Blues'];
+        styles.push('Rock-n-Roll');
+        styles[1] = 'Classics';
+        styles.shift();
+        styles.unshift('Rap', 'Reggae');
+
+        alert(styles);
+
+        /*
+        Jazz, Blues
+        Jazz, Blues, Rock-n-Roll
+        Jazz, Classics, Rock-n-Roll
+        Classics, Rock-n-Roll
+        Rap, Reggae, Classics, Rock-n-Roll
+        */
+	</script>
+</body>
+</html>

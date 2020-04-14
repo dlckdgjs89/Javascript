@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>중복 없는 요소 찾아내기</title>
+	
+</head>
+<body>
+	<script>
+        function unique(arr) {
+            let result = [];
+
+            for(var str of arr) {
+                if(!result.includes(str)) {
+                    result.push(str);
+                }
+            }
+            return result;
+        }
+
+        let strings = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        alert( unique(strings) ); // Hare, Krishna, :-O
+	</script>
+</body>
+</html>

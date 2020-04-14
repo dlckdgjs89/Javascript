@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>배열 복사본을 정렬하기</title>
+	
+</head>
+<body>
+	<script>
+		function copySorted(arr) {
+			return arr.slice().sort(); // slice() 안쓰면 원 데이터가 변경됨;
+		}
+
+		let arr = ["HTML", "JavaScript", "CSS"];
+		
+		let sorted = copySorted(arr);
+
+		alert( sorted ); // CSS, HTML, JavaScript
+		alert( arr ); // HTML, JavaScript, CSS (no changes)
+	</script>
+</body>
+</html>

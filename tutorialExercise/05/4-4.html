@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sum input numbers</title>
+	
+</head>
+<body>
+	<script>
+        // values.push(+value); ---> +value ??? 숫자로 변경해주는거 같긴한데... 첨본다..
+        var values = [];
+        function sumInput() {
+            while(true) {
+                var value = prompt("숫자를 입력하세요.", 0);
+                if(value === "" || value === null || !isFinite(value)) {
+                    break;
+                }
+                values.push(+value);
+            }
+
+            var sum = 0;
+            for(var i=0; i<values.length; i++){
+                sum += values[i];
+            }
+            return sum;
+        }
+
+        alert( sumInput() );
+	</script>
+</body>
+</html>

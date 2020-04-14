@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특정 범위에 속하는 요소 찾기</title>
+	
+</head>
+<body>
+	<script>
+		function filterRange(arr, a, b) {
+			return arr.filter(item => (a <= item && b <= item));
+		}
+	
+		let arr = [5, 3, 8, 1];
+		let filtered = filterRange(arr, 1, 4);
+		alert( filtered ); // 3,1 (조건에 맞는 요소)
+		alert( arr ); // 5,3,8,1 (기존 배열은 변경되지 않았습니다.)
+	</script>
+</body>
+</html>

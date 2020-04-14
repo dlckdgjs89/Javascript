@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>배열 요소 무작위로 섞기</title>
+	
+</head>
+<body>
+	<script>
+		//??
+		// Math.random() - 0.5의 계산 결과는 양수나 음수 둘 중 하나이기 때문에
+		// 정렬 함수는 요소를 무작위로 재 정렬해줍니다.
+
+		function shuffle(array) {
+			array.sort(() => Math.random() - 0.5);
+		}
+
+		let arr = [1, 2, 3];
+
+		console.log(shuffle(arr));
+		// arr = [3, 2, 1]
+
+		console.log(shuffle(arr));
+		// arr = [2, 1, 3]
+
+		console.log(shuffle(arr));
+		// arr = [3, 1, 2]
+		// ...
+	</script>
+</body>
+</html>
