@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>중복 없는 요소 찾아내기</title>
+	
+</head>
+<body>
+	<script>
+let recipeMap = new Map([
+  ['cucumber', 500],
+  ['tomatoes', 350],
+  ['onion',    50]
+]);
+
+for (let entry of recipeMap) { // recipeMap.entries()와 동일합니다.
+  console.log(entry); // cucumber,500 ...
+}
+	</script>
+</body>
+</html>
