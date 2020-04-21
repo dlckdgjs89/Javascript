@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>프로퍼티 개수 세기</title>
+	
+</head>
+<body>
+	<script>
+        function count(obj) {
+           return Object.keys(obj).length;
+        }
+
+        let user = {
+            name: 'John',
+            age: 30
+        };
+
+        alert( count(user) ); // 2
+	</script>
+</body>
+</html>
