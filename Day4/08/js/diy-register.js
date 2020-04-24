@@ -7,7 +7,7 @@ function newRegister(){
     var nameList = document.querySelector("#nameList");
     // nameList.appendChild(newP);
     nameList.insertBefore(newP, nameList.childNodes[0]);
-    nameList.value = "";
+    userName.value = "";
 
     var delBtn = document.createElement("span");
     var delText = document.createTextNode("X");
